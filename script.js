@@ -7,9 +7,14 @@ const findPhraseInArray = (array, phrase) => {
 
   const arrayCopy = [...array];
 
-  // for (const index in arrayCopy){
-
-  // }
+  for (const index in arrayCopy){
+    const id = parseInt(index);
+    
+    if (arrayCopy[id].includes(phrase)){
+      console.log(id)
+      console.log(arrayCopy[id]);
+    }
+  }
 
   // return
 };
@@ -19,5 +24,5 @@ const findPhraseInArray = (array, phrase) => {
 
 
 // przykładowe działanie:
-const result = findPhraseInArray(inputData, "tut");
+const result = findPhraseInArray(inputData, "był");
 // result === [ [2, 'tutaj'], [5, 'TUTAJ'] ]
